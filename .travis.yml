@@ -7,7 +7,7 @@ compiler: clang
 
 script:
 - ${CXX} -fprofile-instr-generate -fcoverage-mapping -o hello
-    hello.cpp goodbye.cpp
+    hello.cxx goodbye.cxx
 - export LLVM_PROFILE_FILE=/tmp/llvm_profile/profile-%p.profraw
 
 - ./hello
