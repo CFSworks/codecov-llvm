@@ -15,5 +15,5 @@ script:
 
 - llvm-profdata merge -sparse /tmp/llvm_profile/profile-*.profraw
     -o coverage.profdata
-- llvm-cov show ./hello -instr-profile=coverage.profdata > app.coverage.txt
+- llvm-cov show ./hello -instr-profile=coverage.profdata > coverage.txt
 - bash <(curl -s https://codecov.io/bash)
